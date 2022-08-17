@@ -12,11 +12,12 @@ function createBoxes() {
 
   for (let i = 1; i <= inputEl.value; i += 1) {
     const boxColor = getRandomHexColor();
-    const boxDimensions = '30px';
+    let boxDimensions = 30;
     
     const newBox = document.createElement("div");
-    newBox.style.width = `${30 + (i - 1) * 10}px`;
-    newBox.style.height = `${30 + (i - 1) * 10}px`;
+    newBox.style.width = `${boxDimensions + (i - 1) * 10}px`;
+    newBox.style.height = `${boxDimensions + (i - 1) * 10}px`;
+
     newBox.style.backgroundColor = boxColor;
 
     boxesArray.push(newBox);
