@@ -11,6 +11,13 @@ function handleSubmit(event) {
   if (email.value === "" || password.value === "") {
     return alert("You shall not pass until logged in!");
   };
-  console.log(`Email: ${email.value}, Password: ${password.value}`);
+  
+  const formData = {
+    email: email.value,
+    password: password.value,
+  };
+
+  console.log(formData);
   event.currentTarget.reset();
+  
 };
